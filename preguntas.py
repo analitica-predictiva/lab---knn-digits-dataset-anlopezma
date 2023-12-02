@@ -50,17 +50,17 @@ def pregunta_02():
     # estratificados. La semilla del generador de números aleatorios es 42.
     # El tamaño del test es del 20%
     X_train, X_test, y_train, y_test = train_test_split(
-        x, y, test_size=0.2, random_state=42, stratify=y
+        x,y, test_size=0.2, random_state=42, stratify=y
     )
 
     # Cree un clasificador con siete vecinos
-    knn = KNeighborsClassifier(n_neighbors=13)
+    knn = KNeighborsClassifier(n_neighbors=7)
 
     # Entrene el clasificador
     knn.fit(X_train, y_train)
 
     # Imprima la precisión (score) del clasificador en el conjunto de datos de prueba
-    print(round(knn.score(X_train, y_train), 4))
+    print(round(knn.score(X_test, y_test), 4))
 
 
 def pregunta_03():
