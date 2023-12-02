@@ -117,3 +117,4 @@ def pregunta_03():
     )
 
     return df
+pregunta_03()    
